@@ -1,72 +1,146 @@
-\documentclass[10pt,a4paper]{extarticle}
-\pagenumbering{gobble}
-\usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.6in]{geometry}
-\usepackage{hyperref}
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
 \usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage{datetime}
-\usepackage{graphicx}
-\titleformat{\section}{\large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{12pt}{8pt}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Kenar Boşlukları
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Bölüm Formatlama
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Özel Komutlar
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  ÖZGEÇMİŞ BURADAN BAŞLIYOR  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
+
+%----------BAŞLIK----------
 \begin{center}
-    \begin{minipage}{\textwidth}
-        \centering
-        {\LARGE\textbf{Onur Ravli}} \hspace{2pt} {\LARGE{Software Developer}}\\[10pt]
-        \href{mailto:onur@onurravli.com}{onur@onurravli.com} \textbullet\
-        \href{https://onurravli.com}{onurravli.com} \textbullet\
-        \href{https://linkedin.com/in/onurravli}{linkedin.com/in/onurravli} \textbullet\
-        \href{https://github.com/onurravli}{github.com/onurravli}
-    \end{minipage}
+    \textbf{\Huge \scshape Sena Yakıcılar} \\ \vspace{1pt}
+    \small 
+    \href{mailto:sena.yakicilar@example.com}{\underline{sena.yakicilar@example.com}} $|$ 
+    \href{https://linkedin.com/in/senayakicilar}{\underline{linkedin.com/in/senayakicilar}} $|$
+    \href{https://github.com/SSsenaa}{\underline{github.com/SSsenaa}} $|$
+    Aydın, Türkiye
 \end{center}
-\section{Summary}
-Software developer with strong experience in designing and building scalable, type-safe, and production-ready applications across both frontend and backend. Proficient in TypeScript and Node.js for backend systems, and React / Next.js for modern, high-performance user interfaces. Experienced in system architecture, distributed systems, and microservices, with a focus on clean code, maintainability, and end-to-end ownership of products. Passionate about building robust platforms that balance engineering excellence with real business impact.
-\section{Experience}
-\textbf{\href{https://insiderone.com}{Insider One}. \textit{(Istanbul, Türkiye)}} \hfill Remote\\
-\textit{Software Developer} \hfill July 2025 -- Present
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item Designed and developed backend and frontend components of the \href{https://usecaselibrary.useinsider.com}{Use Case Library} platform using TypeScript, Node.js, and Next.js.
-    \item Contributed to system architecture and feature development within the Optimus ecosystem.
-    \item Conducted code reviews, ensuring high code quality and maintainability standards.
-\end{itemize}
-\textbf{\href{https://jotform.com}{JotForm}. \textit{(Ankara, Türkiye)}} \hfill Remote\\
-\textit{Summer Intern} \hfill August 2023 -- September 2023
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item Developed a revision history system for Jotform Approvals using Node.js, React, PHP, and MySQL.
-    \item Worked in a collaborative team environment following modern development workflows.
-\end{itemize}
-\textbf{\href{https://www.ustunova.com.tr}{Üstünova Engineering}. \textit{(Ankara, Türkiye)}} \hfill Ankara, Türkiye\\
-\textit{Summer Intern} \hfill July 2023 -- August 2023
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item Built dashboard and control panel interfaces for EV charging station software (Electr-INN).
-    \item Integrated frontend (Next.js) with backend services (Node.js, Django).
-\end{itemize}
-\section{Projects}
-\textbf{\href{https://github.com/libresuite}{LibreSuite} (Open-Source Modular Collaboration Platform)} \hfill 2025 -- Present\\
-\textit{Founder \& System Architect}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item Architected a modular, open-source collaboration platform built as a monorepo using Turborepo and pnpm workspaces.
-    \item Designed and implemented event-driven microservices architecture using Node.js, TypeScript, and Kafka for inter-service communication.
-    \item Developed multiple services (auth, users, workspaces, projects, tasks, notifications) each with isolated Prisma schema and PostgreSQL database.
-    \item Implemented API Gateway pattern for centralized routing, authentication, and service orchestration.
-    \item Containerized all services using Docker and Docker Compose with environment-specific configurations.
-    \item Enforced end-to-end type safety across backend, frontend (Next.js), and database layers.
-    \item Designed scalable system patterns focused on maintainability, domain separation, and clean architecture.
-\end{itemize}
-\section{Skills}
-\textbf{Languages:} TypeScript, Go, Python, Java \\
-\textbf{Backend:} Node.js, Express.js, Nest.js, Django, Spring Boot, REST APIs, GraphQL, Kafka, RabbitMQ \\
-\textbf{Frontend:} React.js, React Native, Next.js, Tailwind CSS \\
-\textbf{Databases:} PostgreSQL, MongoDB, MySQL, Redis \\
-\textbf{Cloud \& DevOps:} Docker, Docker Compose, AWS (EC2, Lambda, S3) \\
-\textbf{Testing \& Tools:} Jest, Postman, Swagger, Git
-\section{Education}
-\textbf{Konya Technical University} \hfill Konya, Türkiye\\
-\textit{B.Sc. in Computer Engineering} \hfill September 2022 -- June 2026\\
-\section{Scholarships}
-\textbf{TÜBİTAK} \hfill Türkiye\\
-\textit{Scholarship Holder, Researcher} \hfill April 2023 -- October 2023
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item Conducted research on explosive circuit detection from X-ray images using ensemble and deep learning techniques.
-\end{itemize}
+
+%-----------EĞİTİM-----------
+\section{Eğitim}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Aydın Adnan Menderes Üniversitesi}{Aydın, Türkiye}
+      {Bilgisayar Mühendisliği (\%100 İngilizce) \& Fizik Yan Dal}{Eyl 2022 -- Haz 2026 (Beklenen)}
+      \resumeItemListStart
+        \resumeItem{GANO}{3.10 / 4.00}
+        \resumeItem{Dersler}{Veri Yapıları, Otomata Teorisi, Mikroişlemciler, Kuantum Teknolojilerine Giriş}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------DENEYİM-----------
+\section{Deneyim}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {InfoCube Bilişim Danışmanlık ve Eğitim}{İstanbul (Uzaktan)}
+      {Gönüllü Stajyer}{Haz 2025 -- Eyl 2025}
+      \resumeItemListStart
+        \resumeItem{Sistem ve Ağ}{Sistem kurulumu, ağ yapılandırması ve temel bilişim altyapılarının yönetimi üzerine çalışmalar.}
+        \resumeItem{Problem Çözme}{Teknik problemlere çözüm üretme ve ekip çalışması içerisinde operasyonel görevler.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {IEEE ADÜ Öğrenci Kolu}{Aydın}
+      {Genel Sekreter}{Oca 2026 -- Günümüz}
+      \resumeItemListStart
+        \resumeItem{Organizasyon}{3. Aydın Teknoloji Zirvesi ve UNİDES (Ulusal ÜNİDES Projesi) koordinasyonu.}
+        \resumeItem{Liderlik}{E-spor turnuvaları, teknik geziler (EYS Endüstri) ve IEEE Ege Bölge Toplantısı organizasyonu.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Astralles Roket Takımı}{Aydın}
+      {Yazılım Geliştirici (Gömülü Sistemler)}{2023 -- 2024}
+      \resumeItemListStart
+        \resumeItem{Donanım}{ESP32 ve Arduino kullanarak sensör tabanlı telemetri ve veri işleme sistemleri.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJELER-----------
+\section{Projeler}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{PrizmaVita} $|$ \emph{React, JavaScript, CSS, HTML}}{2026}
+          \resumeItemListStart
+            \resumeItem{Kişisel Web Sitesi}{Teknoloji ve mühendislik odaklı içeriklerin yer alacağı kişisel platform projesi.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{ESP32 Multimetre Projesi} $|$ \emph{C++, Gömülü Sistemler}}{2025}
+          \resumeItemListStart
+            \resumeItem{Donanım}{ESP32 mikrodenetleyici kullanılarak geliştirilen dijital ölçüm ve veri loglama cihazı.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Akıllı Sisleme Cihazı} $|$ \emph{Arduino}}{2024}
+          \resumeItemListStart
+            \resumeItem{IoT}{Otomatik kontrol mekanizmalı, verimlilik odaklı akıllı tarım/ortam kontrol cihazı.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TEKNİK YETENEKLER-----------
+\section{Teknik Yetenekler}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Diller}{: Java, C, C++, Python, JavaScript, HTML/CSS} \\
+     \textbf{Teknolojiler}{: React, ESP32, Arduino, Git/GitHub, LaTeX, Blockchain Basics} \\
+     \textbf{Yabancı Dil}{: İngilizce (B2)}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
 \end{document}
