@@ -34,12 +34,12 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titrule \vspace{-5pt}]
 
 % Custom commands
-\newcommand{\resumeItem}[2]{
+\newcommand{\resumeItem}[1]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    {#1 \vspace{-2pt}}
   }
 }
 
@@ -73,20 +73,24 @@
 \begin{center}
     \textbf{\Huge \scshape Sena Yakıcılar} \\ \vspace{1pt}
     \small 
-    \href{mailto:sena.yakicilar@example.com}{\underline{yakicilars@gmail.com}} $|$ 
-    \href{https://www.linkedin.com/in/sena-yakicilar-b1b122286}{\underline{linkedin.com/in/sena-yakicilar-b1b122286}} $|$
-    \href{https://github.com/SSsenaa}{\underline{github.com/SSsenaa}} $|$
-    Aydın, Turkey
+    +90 505 098 20 05 $|$ 
+    \href{mailto:yakicilars@gmail.com}{\underline{yakicilars@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/sena-yakicilar-b1b122286}{\underline{linkedin.com/in/sena-yakicilar}} $|$
+    \href{https://github.com/SSsenaa}{\underline{github.com/SSsenaa}}
 \end{center}
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+Computer Engineering student and Physics minor at Aydin Adnan Menderes University, focused on solving engineering problems through physical and mathematical foundations. Experienced in developing embedded systems and software projects, combined with strong organizational leadership as General Secretary of IEEE ADU Student Branch.
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Aydin Adnan Menderes University}{Aydin, Turkey}
-      {B.S. in Computer Engineering \& Physics Minor}{Sep 2022 -- Jun 2026 (Expected)}
+      {B.S. in Computer Engineering (GPA: 3.1)}{Sep 2023 -- Jun 2028 (Expected)}
       \resumeItemListStart
-        \resumeItem{GPA}{3.10 / 4.00}
+        \resumeItem{Currently pursuing a Minor in Physics (Started Sep 2025).}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -95,51 +99,64 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {InfoCube IT Consulting}{Izmir, Turkey}
+      {InfoCube IT Consulting}{Istanbul, Turkey}
       {Volunteer Intern}{Jun 2025 -- Sep 2025}
       \resumeItemListStart
-        \resumeItem{Systems \& Networking}{Gained hands-on experience in system installation, network configuration, and IT infrastructure management.}
-        \resumeItem{Problem Solving}{Collaborated with teams to troubleshoot technical issues and optimize operational workflows.}
+        \resumeItem{System and Network Management: Actively participated in configuring corporate network hierarchies and deploying core IT infrastructure.}
+        \resumeItem{Hardware Integration: Configured and integrated servers and endpoint devices into the network infrastructure.}
       \resumeItemListEnd
 
     \resumeSubheading
       {IEEE ADU Student Branch}{Aydin, Turkey}
-      {General Secretary}{June 2025 -- Present}
+      {General Secretary}{Jan 2026 -- Present}
       \resumeItemListStart
-        \resumeItem{Leadership}{Leading the organization of the 3rd Aydin Technology Summit and the national UNIDES Project.}
+        \resumeItem{Project Coordination: Managed planning, budgeting, and coordination for UNIDES, 3rd Aydin Technology Summit, and IEEE Aegean Region Meeting.}
+        \resumeItem{Strategic Management: Handled official correspondence, organized board meetings, and maintained stakeholder communication channels.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Astralles Rocketry Team}{Aydin, Turkey}
       {Embedded Systems Developer}{2023 -- 2024}
       \resumeItemListStart
-        \resumeItem{Hardware}{Developed sensor-based telemetry and data processing systems using ESP32 and Arduino.}
+        \resumeItem{Telemetry System Design: Designed low-power telemetry architectures for high-altitude rockets to enable real-time data transmission.}
+        \resumeItem{Sensor Fusion and Data Management: Implemented high-precision data acquisition using I2C and SPI protocols for critical flight data (pressure, acceleration, position).}
+        \resumeItem{System Integration: Conducted cross-disciplinary integration tests to ensure firmware compatibility with mechanical and aerospace systems.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming}{: Java, C, C++, Python, JavaScript, HTML/CSS} \\
+     \textbf{Embedded \& Hardware}{: ESP32, Arduino, IoT Applications, Sensor Integration, Telemetry, I2C/SPI/UART} \\
+     \textbf{Tools \& Technologies}{: Git, GitHub, LaTeX, React, Linux Basics, System \& Network Configuration} \\
+     \textbf{Management}{: Project Management (UNIDES), Team Leadership, Event Coordination} \\
+     \textbf{Languages}{: Turkish (Native), English (B2)}
+    }}
+ \end{itemize}
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{PrizmaVita} $|$ \emph{React, JavaScript, CSS, HTML}}{2026}
+          {\textbf{PrizmaVita} $|$ \emph{React, JavaScript, HTML/CSS}}{}
           \resumeItemListStart
-            \resumeItem{Web}{A personal portfolio and technology blog platform focused on engineering insights.}
+            \resumeItem{Personal portfolio and technology blog platform developed using component-based architecture and modern UI/UX principles.}
           \resumeItemListEnd
+          
       \resumeProjectHeading
-          {\textbf{ESP32 Digital Multimeter} $|$ \emph{C++, Embedded Systems}}{2025}
+          {\textbf{ESP32 Digital Multimeter} $|$ \emph{Embedded C++, OLED}}{}
           \resumeItemListStart
-            \resumeItem{Hardware}{A low-cost digital measurement and data logging device built with ESP32.}
+            \resumeItem{Portable measurement device utilizing ADC units for high-precision voltage and current data acquisition.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Smart Misting System} $|$ \emph{Arduino, IoT}}{}
+          \resumeItemListStart
+            \resumeItem{Autonomous climate control system that monitors humidity levels and optimizes environment parameters via sensor feedback.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Java, C, C++, Python, JavaScript, HTML/CSS} \\
-     \textbf{Technologies}{: React, ESP32, Arduino, Git/GitHub, LaTeX, IoT} \\
-     \textbf{Languages}{:English (B2)}
-    }}
- \end{itemize}
 \end{document}
