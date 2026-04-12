@@ -1,5 +1,7 @@
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -17,7 +19,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Kenar Boşlukları
+% Margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -29,12 +31,12 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Bölüm Formatlama
+% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Özel Komutlar
+% Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
@@ -49,6 +51,13 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
@@ -57,91 +66,80 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  ÖZGEÇMİŞ BURADAN BAŞLIYOR  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-%----------BAŞLIK----------
 \begin{center}
     \textbf{\Huge \scshape Sena Yakıcılar} \\ \vspace{1pt}
     \small 
-    \href{mailto:sena.yakicilar@example.com}{\underline{sena.yakicilar@example.com}} $|$ 
-    \href{https://linkedin.com/in/senayakicilar}{\underline{linkedin.com/in/senayakicilar}} $|$
+    \href{mailto:sena.yakicilar@example.com}{\underline{yakicilars@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/sena-yakicilar-b1b122286}{\underline{linkedin.com/in/sena-yakicilar-b1b122286}} $|$
     \href{https://github.com/SSsenaa}{\underline{github.com/SSsenaa}} $|$
-    Aydın, Türkiye
+    Aydın, Turkey
 \end{center}
 
-%-----------EĞİTİM-----------
-\section{Eğitim}
+%-----------EDUCATION-----------
+\section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Aydın Adnan Menderes Üniversitesi}{Aydın, Türkiye}
-      {Bilgisayar Mühendisliği (\%100 İngilizce) \& Fizik Yan Dal}{Eyl 2022 -- Haz 2026 (Beklenen)}
+      {Aydin Adnan Menderes University}{Aydin, Turkey}
+      {B.S. in Computer Engineering \& Physics Minor}{Sep 2022 -- Jun 2026 (Expected)}
       \resumeItemListStart
-        \resumeItem{GANO}{3.10 / 4.00}
-        \resumeItem{Dersler}{Veri Yapıları, Otomata Teorisi, Mikroişlemciler, Kuantum Teknolojilerine Giriş}
+        \resumeItem{GPA}{3.10 / 4.00}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%-----------DENEYİM-----------
-\section{Deneyim}
+%-----------EXPERIENCE-----------
+\section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {InfoCube Bilişim Danışmanlık ve Eğitim}{İstanbul (Uzaktan)}
-      {Gönüllü Stajyer}{Haz 2025 -- Eyl 2025}
+      {InfoCube IT Consulting}{Izmir, Turkey}
+      {Volunteer Intern}{Jun 2025 -- Sep 2025}
       \resumeItemListStart
-        \resumeItem{Sistem ve Ağ}{Sistem kurulumu, ağ yapılandırması ve temel bilişim altyapılarının yönetimi üzerine çalışmalar.}
-        \resumeItem{Problem Çözme}{Teknik problemlere çözüm üretme ve ekip çalışması içerisinde operasyonel görevler.}
+        \resumeItem{Systems \& Networking}{Gained hands-on experience in system installation, network configuration, and IT infrastructure management.}
+        \resumeItem{Problem Solving}{Collaborated with teams to troubleshoot technical issues and optimize operational workflows.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {IEEE ADÜ Öğrenci Kolu}{Aydın}
-      {Genel Sekreter}{Oca 2026 -- Günümüz}
+      {IEEE ADU Student Branch}{Aydin, Turkey}
+      {General Secretary}{June 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Organizasyon}{3. Aydın Teknoloji Zirvesi ve UNİDES (Ulusal ÜNİDES Projesi) koordinasyonu.}
-        \resumeItem{Liderlik}{E-spor turnuvaları, teknik geziler (EYS Endüstri) ve IEEE Ege Bölge Toplantısı organizasyonu.}
+        \resumeItem{Leadership}{Leading the organization of the 3rd Aydin Technology Summit and the national UNIDES Project.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Astralles Roket Takımı}{Aydın}
-      {Yazılım Geliştirici (Gömülü Sistemler)}{2023 -- 2024}
+      {Astralles Rocketry Team}{Aydin, Turkey}
+      {Embedded Systems Developer}{2023 -- 2024}
       \resumeItemListStart
-        \resumeItem{Donanım}{ESP32 ve Arduino kullanarak sensör tabanlı telemetri ve veri işleme sistemleri.}
+        \resumeItem{Hardware}{Developed sensor-based telemetry and data processing systems using ESP32 and Arduino.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-%-----------PROJELER-----------
-\section{Projeler}
+%-----------PROJECTS-----------
+\section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
           {\textbf{PrizmaVita} $|$ \emph{React, JavaScript, CSS, HTML}}{2026}
           \resumeItemListStart
-            \resumeItem{Kişisel Web Sitesi}{Teknoloji ve mühendislik odaklı içeriklerin yer alacağı kişisel platform projesi.}
+            \resumeItem{Web}{A personal portfolio and technology blog platform focused on engineering insights.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{ESP32 Multimetre Projesi} $|$ \emph{C++, Gömülü Sistemler}}{2025}
+          {\textbf{ESP32 Digital Multimeter} $|$ \emph{C++, Embedded Systems}}{2025}
           \resumeItemListStart
-            \resumeItem{Donanım}{ESP32 mikrodenetleyici kullanılarak geliştirilen dijital ölçüm ve veri loglama cihazı.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Akıllı Sisleme Cihazı} $|$ \emph{Arduino}}{2024}
-          \resumeItemListStart
-            \resumeItem{IoT}{Otomatik kontrol mekanizmalı, verimlilik odaklı akıllı tarım/ortam kontrol cihazı.}
+            \resumeItem{Hardware}{A low-cost digital measurement and data logging device built with ESP32.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-    
-%-----------TEKNİK YETENEKLER-----------
-\section{Teknik Yetenekler}
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Diller}{: Java, C, C++, Python, JavaScript, HTML/CSS} \\
-     \textbf{Teknolojiler}{: React, ESP32, Arduino, Git/GitHub, LaTeX, Blockchain Basics} \\
-     \textbf{Yabancı Dil}{: İngilizce (B2)}
+     \textbf{Languages}{: Java, C, C++, Python, JavaScript, HTML/CSS} \\
+     \textbf{Technologies}{: React, ESP32, Arduino, Git/GitHub, LaTeX, IoT} \\
+     \textbf{Languages}{:English (B2)}
     }}
  \end{itemize}
-
-%-------------------------------------------
 \end{document}
